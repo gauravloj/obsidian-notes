@@ -1,0 +1,7 @@
+- https://tryhackme.com/module/red-team-fundamentals
+- https://tryhackme.com/module/red-team-initial-access
+- https://tryhackme.com/module/post-compromise
+- https://tryhackme.com/module/host-evasions
+- https://tryhackme.com/module/network-security-evasion
+- https://tryhackme.com/module/hacking-active-directory
+- 

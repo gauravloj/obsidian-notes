@@ -1,0 +1,119 @@
+- types of apps: 
+	- Native - written in Objective C/Swift, Java/Kotlin
+	- Hybrid - Native UI + web views
+	- Web Wrappers - Web view
+- Languages to know
+	- Objective C/Swift for iOS
+	- Java/Kotlin for android
+	- Javascript for hybrid
+- Pick a target app
+	- select one which uses web view
+	- which communicates with server a lot
+	- games with leaderboards
+- Get source code
+	- Check public repo like github
+	- decomplie
+- Use proxy to listen on all interfaces, disable certificate pinning
+- Common bugs to explore
+	- Injections
+	- IDOR
+	- Lack of AuthN/AuthZ
+	- Insecure uploads
+	- Check credential storage - keychain, smart lock
+	- Look for connections to http protocol (instead of https)
+	- Embedded secrets - access keys, private keys
+	- Potential debug/dev interface in apps
+	- Stored app data/ cached data
+	- Insecure crypto
+	- App - screenshots
+
+## Android
+- Structure
+	- APK container - can use `apktool` to unzip it
+	- Dex files - application code, binary form of Java/Kotlin programs. Can be decompiled using `apktool`, `dex2jar`
+	- Resources - static resources
+	- Manifest.xml - All the app related configs, resources, actions, intents are stored here
+- Tools
+	- [Android Studio](https://developer.android.com/studio)
+	- Android emulator
+	- [Genymotion](https://www.genymotion.com/)
+	- [apktool](https://github.com/iBotPeaches/Apktool)
+	- [dex2jar](https://github.com/pxb1988/dex2jar)
+	- [Jadx](https://github.com/skylot/jadx) Dex to Java
+	- [JD-GUI](https://java-decompiler.github.io/) - java decompiler
+	- [Frida](https://frida.re/) - runtime manipulation of applications
+- Testing tips
+	- `adb logcat` - see logs from the mobile
+	- disable cert pinning
+	- Intent filters - handle specific protocol in an app
+- Common bugs
+	- Intent and activities
+	- Cross-app scripting - when user input ends up in a web view of app
+	- Intent redirection - see which activity is triggered by an intent, check intent input properly
+	- Intent broadcast - ensure no sensitive data is added to broadcast call, when known pick a target app for the intent
+	- unprotected activities
+	- typos in custom permissions
+	- path traversal
+	- zip path traversal - while unzipping, extracted path is appended the destination path. Issue `./ + ../../../file.txt` . Check `evilarc` tool
+	- Embedded secrets - Symmetric keys, private keys, HMAC keys
+	- OAuth implicit grants
+	- OAuth redirect uri hijacking
+- Check Google Play security rewards program
+
+## iOS Hacking
+- Structure
+	- IPA packages - rename to `.zip` and extract
+	- `Payloads/<appname>.app` : main folder to focus on
+	- Apps from playstore are encrypted by default
+	-  Info.plist - Contains configs, actions, and other app behavior details. Can be converted to xml using `plutil` tool
+- Usually tested on an actual device because emulator are not available
+- iOS native apps are compiled directly to machine code - so difficult to decompile
+- File System:
+	- ``﻿/var/containers/Bundle/Application/ [UUID]`
+		- Bundle directory
+		- ﻿﻿Tampering invalidates signature
+	- `﻿﻿/var/mobile/Containers/Data/[UUID]`
+		- ﻿﻿App's runtime data
+		- `﻿Documents/` - user-generated content
+		- ﻿﻿`Library/` - files that are not user data
+		- `﻿﻿Library/Application Support/` - hidden support files
+		- `﻿﻿Library/Caches/` - cache data, not backed up. Use dump caches to see the binary data.
+		- ﻿﻿`Library/Preferences/` - preference files
+		- `﻿﻿tmp/` - temporary data that may be purged, not backed up
+		- `Library/Cookies`: user cookie reader to read the cookies binary files
+		- `NSKeyedArchiver` - It is used to serialize arbitary objects. use deserializer to read these binary archive files
+- Inter-app communication
+	- Pasteboard - copy/paste
+	- URL scheme
+	- apple-app-site-association: served on the apps' registered website
+-  Tools
+	- Xcode - main IDE
+	- [bfinject](https://github.com/BishopFox/bfinject) - inject shared libraries, useful in decrypting the app store binary
+	- [cycrypt](https://www.cycript.org/) - manipulate running apps
+	- [Frida](https://frida.re/) - runtime manipulation of applications
+	- https://mas.owasp.org/MASTG/tools/ios/MASTG-TOOL-0050/ 
+	- [Cydia Impactor](https://www.cydiaimpactor.com/) - install IPA on non-jail broken device
+	- [https://www.hopperapp.com/] - paid, rough decompiler/disassembler for IPAs
+	-  [SSL kill sqitch 2](https://github.com/nabla-c0d3/ssl-kill-switch2) - disable cert pinning
+	- [Burp mobile assistant](https://portswigger.net/burp/documentation/desktop/mobile)
+- Testing tips
+	- Use `bfinject` to decrypt IPA, `bfinject -P AppName -L decrypt`
+	- use `Burp mobile assistant` or `SSL killsqitch2` for cert pinning. In worst case, use `frida` to disable SSLs
+	- For `IPad` only apps, edit `Info.plist` and change `UlDeviceFamily` to  `1`
+	- Check of r memory corruption bugs
+	- Custom URL schemes - Check `Info.plist` for `CFBundleURLTypes` 
+
+- Commands
+	- Unzip ipa files: `unzip -d dest_dir appname.ipa`
+	- Show binary file metadata: `rabin2 -T dest_dir/Payload/appname.app/appname`
+	- List libraries used: `rabin2 -l appname`
+	- Extrat binaries separately: `rabin2 -x appname.ipa`
+	- Show app metadata: `plutil -p dest_dir/Payload/appname.app/Info.plist``
+	- Open IPA file for analysis: `r2 ipa://appname.ipa`
+	- [Dump runtime binary](https://github.com/stefanesser/dumpdecrypted) - Useful for encrypted apps
+	- Dump Objective-C classes:
+		- `dsdump -oc appname`
+		- `rabin2 -cc appname`
+	- Dump Objective-C classes: `dsdump -sc appname`
+	- Dump string with details: `rabin2 -zzq appname`
+	

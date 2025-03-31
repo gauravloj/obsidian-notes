@@ -1,0 +1,21 @@
+
+- UART - Universal Asynchronous receiver transmitter, 4 pins - VCC (Power), GND, Rx, Tx
+- JTAG - Joint test action group, allows to debug on multi-layered circuit board, 10 pins available, 5 needed
+	- TCK - Test Clock Input
+	- TMS - Test Mode Select
+	- TDI - Test Data Input
+	- TDO - Test Data Output
+	- TRST - Test Reset Input
+- SOIC - Small outline integrated circuit
+	- ﻿4, 8, 16, 24 pins
+		- CS - Chip Select
+		- SCK - Serial Clock
+		- MOSI - Master Out, Slave IN
+		- MISO - Master In, Slave OUT
+	- ﻿SPI (Serial Peripheral Interface) -Transfer information from chip to microprocessor 
+	- ﻿Can retrieve data from EEPROM/Flash Memory
+- Baud rate
+- Parity
+- stop bits
+- receive polarity
+- 

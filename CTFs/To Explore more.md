@@ -1,0 +1,19 @@
+ - JS obfuscation
+ - Windows event logs
+ - windows binary analysis
+ - digital forensics - memory dump, disk image
+ - Blockchain
+ - AI prompt
+ - Crypto
+ - PWN/reversing
+- Javascript engine
+	- https://github.com/mozilla-spidermonkey
+	- https://firefox-source-docs.mozilla.org/js/index.html
+	- https://github.com/v8/v8 
+	- https://v8.dev/
+	- 
+ - OpenSSL
+ - Radare2
+ - IoT reversing
+ - 
+ 

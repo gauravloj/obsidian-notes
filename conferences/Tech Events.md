@@ -1,0 +1,13 @@
+- [cloudsummit](https://cloudsummit.ca/) - 27th May
+- [Global IT conference Vancouver](https://globalconference.ca/conference/30th-global-conference-on-information-technology-and-computer-science/) -  July 19, 2025
+- [Global CyberSecurity Conference Vancouver](https://globalconference.ca/conference/39th-global-conference-on-cyber-security-and-cloud-engineering/) - ![](https://globalconference.ca/wp-content/uploads/2022/12/calendar-icon.png) July 19, 2025
+- [BC Connect 2025](https://www.bc.net/connect/2025-connect-schedule) - 31st March - 3rd April
+- [BSides Vancouver](https://www.bsidesvancouver.com/) - 25th May- 26th May
+- [Darktrace Global](https://darktrace.com/live#City)
+- [Vancouver: Siberx - Defend North](https://siberx.org/event/operation-defend-the-north-2025-vancouver/) - April 3
+- [CanSecWest](https://www.secwest.net/venue-details)
+- [All Sec events list - Vancouver](https://kobalt.io/vancouver-security-events/)
+- [Web Summit - Vancouver](https://vancouver.websummit.com/volunteers/) 
+	- 27th-30th May 
+	- [volunteer link](https://sites.google.com/websummit.com/wsvan25volunteerportalappl/application/application-process)
+- [Techspo Vancouver](https://techspovancouver.ca/volunteer/) - 10-11 April

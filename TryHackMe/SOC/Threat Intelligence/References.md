@@ -1,0 +1,30 @@
+- https://attack.mitre.org/
+- [The Trusted Automated eXchange of Indicator Information (TAXII)](https://oasis-open.github.io/cti-documentation/taxii/intro)
+- [Structured Threat Information Expression (STIX)](https://oasis-open.github.io/cti-documentation/stix/intro)
+- Reports:
+	- https://www.mandiant.com/resources
+	- https://www.recordedfuture.com/resources/global-issues
+	- https://cybersecurity.att.com/
+- MISP
+	- [MISP (Malware Information Sharing Platform)](https://www.misp-project.org/), 
+	- [MISP Book](https://www.circl.lu/doc/misp/)
+	- [MISP GitHub](https://github.com/MISP/)
+	- [CIRCL MISP Training Module 1](https://www.youtube.com/watch?v=aM7czPsQyaI)
+	- [CIRCL MISP Training Module 2](https://www.youtube.com/watch?v=Jqp8CVHtNVk)
+- Tools
+	- https://urlscan.io/
+	- https://abuse.ch/ : Includes [MalwareBazaar](https://bazaar.abuse.ch/), [FeodoTracker - BotNet/C&C intel](https://feodotracker.abuse.ch/) , [SSL Blacklist](https://sslbl.abuse.ch/) , [URLhaus](https://urlhaus.abuse.ch/), [ThreatFox](https://threatfox.abuse.ch/)
+	- [Email Analysis - PhishTool](https://www.phishtool.com/)
+	- [Talos Intelligence](https://talosintelligence.com/).
+	- [OpenCTI](https://github.com/OpenCTI-Platform/opencti)
+	- Elastic SIEM
+		- [Logstash](https://www.elastic.co/guide/en/logstash/index.html)
+		- [Kibana](https://www.elastic.co/guide/en/kibana/index.html)
+		- [Filebeat](https://elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html
+- Incident Response
+	- [TheHive Project - strangebee](https://strangebee.com/) & their [GitHub Repo](https://github.com/TheHive-Project/TheHive).
+	- [NIST - SP800-61](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
+	- [Incident Handler's handbook](https://www.sans.org/white-papers/33901/)
+	- 
+
+

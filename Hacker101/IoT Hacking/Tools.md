@@ -1,0 +1,33 @@
+- Multimeter - Measure electricity
+	- Pins slots: 
+		- COM - for ground wire - black probe
+		- 500V (= 200 mA) or 10A = Power Source = Red Probe
+		- V -> Volts, mA -> miliAmps, A -> Amps
+	- Measuring dial
+		- Direct current (DC) voltage
+		- Alternate current (AC) voltage
+		- Resistance
+		- Continuity test
+		- BATT - battery test, `red probe` on positive side of battery, `black probe` on negative side
+		- Amps - low but safe, large but unsafe
+-   TTL to USB
+	- TTL - Transistor-Transistor logic, bipolar transistors act of direct current pulse.
+	- Used to connect UART to USB
+- [Bus Pirate](http://dangerousprototypes.com/docs/Bus_Pirate) 
+	- Can be used to connect UART to USB, JTag to USB, SOIC chip to USB for firmware dumping
+- terminal multiplexers: 
+	- `sudo screen <TTYID> <Baud Rate>`, Eg. `sudo screen /dev/ttyUSB0 115200`. Once the shell is opened
+	- PuTTy
+- [JTAGUlator](https://grandideastudio.com/portfolio/security/jtagulator/) On-chip debug interface, [sorce code](https://github.com/grandideastudio/jtagulator). Useful to identify different PINs on a board
+- [Attify Badge](https://www.attify-store.com/products/attify-badge-uart-jtag-spi-i2c) Similar to Bus pirate with extra PINs
+- [Arduino](https://www.arduino.cc/) - small microprocessor for experiments. Code examples:
+	- https://github.com/cyphunk/JTAGenum 
+	- https://github.com/cyphunk/RS232enum
+	- https://github.com/mdsecresearch/UARTFuzz
+- SOIC Clip - connect SPIC chip to Bus Pirate/Arduino board/Attify Badge via SOIC adapter
+- [Binwalk](https://github.com/ReFirmLabs/binwalk) - Embedded files analyzer
+- [QEMU](https://www.qemu.org/) - Emulate different CPU architectures to run arch specific binaries
+- [Firmware analysis toolkit](https://github.com/attify/firmware-analysis-toolkit)
+- [Formware Mod kit](https://github.com/rampageX/firmware-mod-kit)
+- [Attify OS](https://www.attify.com/attifyos) OS specialized for IoT pentesting
+- [flashrom](https://www.flashrom.org/) to wipe and reinstall bootloaders

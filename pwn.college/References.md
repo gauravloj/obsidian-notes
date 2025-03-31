@@ -1,0 +1,17 @@
+- [Syscalls](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
+- [Rapple](https://github.com/yrp604/rappel) -Check register state for assembly instructions
+- [X86 opcode list](http://ref.x86asm.net/coder64.html)
+- [X86 assmbly directives](https://www.felixcloutier.com/x86/) - felix coutier
+- https://soc.me/interfaces/x86-prefixes-and-escape-opcodes-flowchart
+- Debugging
+	- - [GDB's documentation](https://sourceware.org/gdb/onlinedocs/gdb/index.html)
+	- [Tudor's gdb crash course](https://web.archive.org/web/20250101052732/https://users.umiacs.umd.edu/~tdumitra/courses/ENEE757/Fall15/misc/gdb_tutorial.html)
+	- [gdb debugging full example](https://www.brendangregg.com/blog/2016-08-09/gdb-example-ncurses.html)
+	- [pwndbg: a gdb extension (feature list)](https://github.com/pwndbg/pwndbg/blob/dev/FEATURES.md)
+	- [gef: another gdb extension (feature list)](https://hugsy.github.io/gef/commands/aliases/)
+	- The course [Debuggers 1012: Introductory GDB](https://ost2.fyi/Dbg1012) from OpenSecurityTraining2.
+- [Kaitai Struct](https://kaitai.io/) - web IDE for binary parsers
+- [pwntools cheatsheet](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
+- [Networkin in C](https://www.binarytides.com/socket-programming-c-linux-tutorial/)
+- [Pipes in C](https://jameshfisher.com/2017/02/17/how-do-i-call-a-program-in-c-with-pipes/)
+- 

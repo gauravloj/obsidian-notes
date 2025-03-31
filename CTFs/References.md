@@ -1,0 +1,38 @@
+
+- [Default ports and services](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
+- [IDS/IPS details](https://geekflare.com/ids-vs-ips-network-security-solutions/)
+- [Digital Forensics Report](https://thedfirreport.com/)
+- [FireEye Threat Research Blogs](https://www.fireeye.com/blog/threat-research.html)
+-  hash lookups like:
+	- [VirusTotal](https://www.virustotal.com/gui/) 
+	- [Metadefender Cloud - OPSWAT](https://metadefender.opswat.com/?lang=en)
+- Hide between IP - [FastFlux 101](https://unit42.paloaltonetworks.com/fast-flux-101/)
+- [What is C2](https://www.varonis.com/blog/what-is-c2)
+- [Malware Samples - MalWareBazaar](https://bazaar.abuse.ch/)
+- [Malware Samples - malshare](https://malshare.com/ )
+- [Malware detection rules - SOC prime](https://tdm.socprime.com/)
+- [Rapid7 - APTs](https://docs.rapid7.com/insightidr/apt-groups/)
+- Packet Filters syntax:
+	- [https://en.wikipedia.org/wiki/Berkeley_Packet_Filter](https://en.wikipedia.org/wiki/Berkeley_Packet_Filter)
+	- [https://biot.com/capstats/bpf.html](https://biot.com/capstats/bpf.html)
+	- [https://www.tcpdump.org/manpages/tcpdump.1.html](https://www.tcpdump.org/manpages/tcpdump.1.html)
+- Blind Injection free webhooks:
+	- [Request bin](https://requestbin.com)
+	- [Canary tokens](https://canarytokens.org)
+	- http://webhook.site
+	- Burp collaborator
+	- ifconfig.pro
+- Payloads:
+	- https://github.com/payloadbox
+	- https://github.com/swisskyrepo/PayloadsAllTheThings
+	- rev shell: https://www.revshells.com/
+	- [Seclists - Fuzzing](https://github.com/danielmiessler/SecLists/tree/master/Fuzzing)
+	- [String terminators](https://ahmed-tarek.gitbook.io/0x_xnum/api-pen/evasive-maneuvers)
+	- [Evade firewall](https://github.com/0xInfection/Awesome-WAF)
+	- [Onw list for all](https://github.com/six2dez/OneListForAll)
+	- [Assetnote wordlist](https://wordlists.assetnote.io/): `wget -r --no-parent -R "index.html*" https://wordlists-cdn.assetnote.io/data/ -nH -e robots=off`. [Github repo](https://github.com/assetnote/wordlists)
+	- 
+- Hardware Hacking
+	- [Hardwear event YT](https://www.youtube.com/playlist?list=PL8tHFrmzAuvRIt1ERwYgOqbE30u1OFRfc)
+	- 
+	
