@@ -1,4 +1,6 @@
 
+- [All Links Security - HDKS](https://security-links.hdks.org/websites/21/)
+- Libc Database: [Blukat](https://libc.blukat.me/), [libc.rip](https://libc.rip/)
 - [Default ports and services](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
 - [IDS/IPS details](https://geekflare.com/ids-vs-ips-network-security-solutions/)
 - [Digital Forensics Report](https://thedfirreport.com/)

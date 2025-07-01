@@ -29,12 +29,25 @@
 	- https://ahmed-tarek.gitbook.io/0x_xnum
 	- SSTI injection - [SSTIMap](https://github.com/vladko312/SSTImap)
 
+## Reverse Engineering:
+- [Guided Game Hacking](https://www.youtube.com/@GuidedHacking/videos )
+- [Ghidra Tutorial](https://youtu.be/OWEZQMVLMPs)
+- [Ghidra reversing for different data types](https://www.youtube.com/playlist?list=PLHJns8WZXCdu6kPwPpBhA0mfdB4ZuWy6M)
+- 
 ## Binary Exploitation
 - [Hardware failures](https://architecture.fail/): Meltdown, spectre, iLeakage
 
 ## Wireless 
 - [Wireless fuzzing BLE](https://github.com/whad-team/whad-client/)
 - 
+
+##  Practicals
+- https://tryhackme.com/
+- https://www.hackthebox.com/
+## Blogs
+- https://www.sans.org/blog/
+- https://www.reddit.com/r/cybersecurity/
+
 
 ## Misc
 - [Security+ professor messer](https://www.youtube.com/@professormesser/playlists) 
@@ -47,13 +60,9 @@
 - https://www.darkreading.com/
 - https://darknetdiaries.com/
 - https://thecyberwire.com/podcasts/daily-podcast
-- https://tryhackme.com/
-- https://www.hackthebox.com/
 - https://www.rangeforce.com/
 - https://www.immersivelabs.com/
 - https://cyberdefenders.org/blueteam-ctf-challenges/
-- https://www.reddit.com/r/cybersecurity/
-- https://www.sans.org/blog/
 - https://pauljerimy.com/security-certification-roadmap/
 - https://infosec-conferences.com/
 - Check IP info: AbuseIPDB, Cisco Talos Intelligence

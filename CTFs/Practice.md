@@ -14,6 +14,10 @@ WEB
 Mobile
 - [Injured Android](https://github.com/B3nac/InjuredAndroid)
 
+Network
+- https://academy.networkchuck.com/
+
+
 CTF:
 - TryHackMe
 - HackTheBox
@@ -23,3 +27,12 @@ CTF:
 - Cyberchef
 - sans holiday
 -  CTF resources: https://medium.com/technology-hits/capture-the-flag-ctf-resources-for-beginners-9394ee2ea07a
+- https://cryptohack.org/courses/ - Cryptography
+- [pwn.college](https://pwn.college)
+- https://mysterytwister.org/ - crypto
+- https://cryptopals.com/ - crypto
+- https://dojo-yeswehack.com
+- https://ctf.nahamcon.com/
+- hackinghub.io
+- https://ringzer0ctf.com/ - everything
+- 

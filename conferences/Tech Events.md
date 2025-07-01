@@ -11,3 +11,5 @@
 	- 27th-30th May 
 	- [volunteer link](https://sites.google.com/websummit.com/wsvan25volunteerportalappl/application/application-process)
 - [Techspo Vancouver](https://techspovancouver.ca/volunteer/) - 10-11 April
+- https://ringzer0.regfox.com/
+- 

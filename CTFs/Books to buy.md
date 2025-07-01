@@ -1,0 +1,12 @@
+- [Bare Metal C](https://nostarch.com/bare-metal-c)
+- [Car hacker's Handbook](https://nostarch.com/carhacking)
+- [Art of Exploitation](https://nostarch.com/hacking2.htm)
+- [How to hack like a ghost](https://nostarch.com/how-hack-ghost)
+- [Microcontroller Exploits](https://nostarch.com/microcontroller-exploits)
+- [Practical Binary Analysis](https://nostarch.com/binaryanalysis)
+- [Hardware Hacking Handbook](https://nostarch.com/hardwarehacking)
+- [Art of Web Assembly](https://nostarch.com/art-webassembly)
+- [Art of Mac Malware 1](https://nostarch.com/art-mac-malware-volume-1)
+- [Android Malware handbook](https://nostarch.com/androidmalwarehandbook)
+- [Practical Forensic Imaging](https://nostarch.com/forensicimaging)
+- 

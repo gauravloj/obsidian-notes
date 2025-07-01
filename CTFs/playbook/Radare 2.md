@@ -1,0 +1,91 @@
+- [YT Tutorials](https://www.youtube.com/playlist?list=PLg_QXA4bGHpvsW-qeoi3_yhiZg8zBzNwQ)
+- Principle - `seek`, `act`, `print`
+- Open in radare2: `r2 <binary>`
+- `eco` - select color scheme
+
+- Help
+	- `i?` : help for info module
+	- `d?`: help info for debug module
+	- `a?`: help info for analyze module
+	- `~?`: search pattern help info
+	- `/?`: search help info
+- `V`  Toggle to binary View mode. 
+	- `p`: switch between different views, select next view in sequence
+	- `P`: switch between different views, select previous view in sequence
+	- `j`, `k`, arrow keys: move up and down in the binary view. It also sets the current location for debugging
+	- `<enter>`: if current line is a call to another function, follow that function address
+	- `u`: jump back to the previous location from which the address was followed using `<enter>`
+	- `;`: add a comment on the current seek position
+	- `q` : exit the binary view mode
+- Analysis
+	- `aaa` - analyze the binary
+	- `afl` - Analyze function list
+	- `afl~<searchstring>` : filter the function list that matches the search string
+	- `/ad/ xor ~ah` : search disassembly code for xor instruction with `ah` in it
+	- `iS~[5]` : Show column 5 (base 0) from the results
+	- `aar` - analyze address references (instruction references)
+	- `s main` - seek to `main` function (jump to the address)
+	- `axt` : analyze cross references to. Search all the locations where current function is called.
+	- `axf` : analyze cross references from.
+- Info
+	- `ii` - info about imports
+	- `iI` - binary info
+	- `iS` - sections
+	- `is` - symbols
+	- `iz` - strings
+	- `iS entropy`: get entropy of different sections. High entropy typically means packed binary
+- Binary Info
+	- `rabin2 -a arch -b bits -i <binary>` show binary info  for given architecture and bit size
+	- `rabin2 -g <binary>` show all possible information
+	- `rabin2 -l <binary>` show linked libraries
+	- `rabin2 -z <binary>` show strings in data section
+	- `rafind2 -z` : find zero terminated strings
+	- `rafind2 -s` : find specific string
+	- `rafind2 -e` : find regular expression
+	- `rafind2 -x` : find hex pairs
+```sh
+export F=/bin/ls
+for a in `rafind2 -s libc $F`; do r2 -ns $a -qc 'x 32' $F; done
+```
+- Patching
+	- `r2 -w <binary>` : open binary in write mode
+	- `A` : Press `A` in view binary mode to start writing. Eg. `A` -> `mov rax, 0x1337` -> `<enter>`
+	- `w?` : other write commands
+- Debugging
+	- `r2 -d -A <binary>` : Launch binary in debug mode, `-A` for auto analyze on launch
+	- Side note: In view mode `:e stack.size = 256` to display the 256 bytes in stack view during debugging
+	- Explore: tmux view for debugging
+	- `F7` -> step into
+	- `F8` -> step over
+	- `ds?` -> all debug step instructions
+	- `db <addr>` : add debug breakpoint on given address/symbol
+	- `db`: show current breakpoints
+	- `dc` : debug continue
+	- `do`: open the process for debugging again. Start over
+	- Press `.`  in view mode to go the current program instruction. Helpful when our seek pointer is different from program counter
+	- `dsf`: finish current frame (function)
+	- `pf S @ <addr>`:  print function symbol at given address
+	- `afvd`: display local function variable declaration. `.afvd <symbol name>` print the value of given local variable 
+	- `pd @ <addr>` - print disassembly at address, `pdf` prints disassembly of the function
+	- `axt @ @ str.*` - print cross references to all the strings
+	- `dr` - show general purpose registers
+	- `dr 1` - flags in flags register
+	- 
+- Graph View:
+	- `VV` to enter the graph view
+	- `g<letter>` : these jump commands are visible on appropriate instructions where jump is possible
+	-  `p`, `P` : switch to different display modes
+	- `x` -> cross references to the function at current seek position
+- Visual Panel:
+	- in View mode: press `!` to open the visual panel mode
+	- `"` on active window to change its settings
+	- `-` horizontal split the current panel
+	- `X` : close panel
+	- `w`: switch to window mode to resize the panel
+	- `t`: tab related actions
+- Decompiler
+	- install `r2ghidra`, run `r2pm update` -> `r2pm install r2ghidra`
+	- Other useful plugins
+		- `r2dec`
+		- `r2frida`
+	- `pdg` -> print decompiled function code

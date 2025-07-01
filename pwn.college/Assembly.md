@@ -1,4 +1,6 @@
 building assembly
+- Generate shellcode with .text segment as writable
+	- `gcc -Wl, -N --static -nostdlib -o test test.s`
 - Simple assembly file
 ```asm
 .intel_syntax noprefix
